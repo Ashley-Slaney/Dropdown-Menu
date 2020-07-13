@@ -1,0 +1,84 @@
+:root{
+  --primary-colour: #76ead7;
+  --secondary-colour: #393e46;
+  --tertiary-colour: #eeeeee;
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--tertiary-colour);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+#navbar li {
+  color: var(--secondary-colour);
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+}
+
+#navbar a {
+  color: var(--secondary-colour);
+  text-decoration: none;
+}
+
+#navbar a:hover{
+  color: var(--secondary-colour);
+}
+
+/* HIDE NESTED UL BY DEFAULT */
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover {
+  cursor: pointer;
+  background: var(--primary-colour);
+  color: var(--secondary-colour);
+}
+
+/* NESTED DROPDOWN SHOW */
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: var(--secondary-colour);
+  color: var(--primary-colour);
+}
+
+#navbar ul li:hover ul li a {
+  color: var(--tertiary-colour);
+}
+
+#navbar ul li:hover ul li:hover {
+  background: #4d545b;
+}
+
+#navbar ul li:hover ul li:hover a {
+  color: var(--primary-colour);
+}
+
+#navbar ul li:hover ul li span {
+  float: right;
+  background: var(--primary-colour);
+  color: var(--secondary-colour);
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
