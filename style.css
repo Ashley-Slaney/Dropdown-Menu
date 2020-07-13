@@ -15,25 +15,31 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#navbar {
+  background: var(--secondary-colour);
+  border-bottom: var(--secondary-colour) solid 1px;
+}
+
 #navbar ul {
   list-style: none;
 }
 
 #navbar li {
-  color: var(--secondary-colour);
+  color: var(--tertiary-colour);
   display: inline-block;
   padding: 1rem;
   position: relative;
 }
 
 #navbar a {
-  color: var(--secondary-colour);
+  color: var(--tertiary-colour);
   text-decoration: none;
 }
 
-#navbar a:hover{
+#navbar ul li:hover a{
   color: var(--secondary-colour);
 }
+
 
 /* HIDE NESTED UL BY DEFAULT */
 #navbar ul li ul {
@@ -81,4 +87,34 @@ body {
   text-align: center;
   font-size: 0.8rem;
   border-radius: 5px;
+}
+
+#navbar ul li:hover ul li:hover span {
+  background: #60b5a7;
+}
+
+#showcase {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  background: var(--primary-colour);
+}
+
+#showcase h1 {
+  color: var(--secondary-colour);
+}
+
+@media (max-width: 600px) {
+  #navbar ul li {
+    display: block;
+  }
+
+  #navbar ul li:hover ul {
+    width: 100%;
+    position: relative;
+  }
 }
